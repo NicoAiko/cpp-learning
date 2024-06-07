@@ -1,10 +1,8 @@
-﻿// cpp-learning.cpp: Definiert den Einstiegspunkt für die Anwendung.
-//
-
-#include "cpp-learning.h"
-
+﻿#include "Log.h"
 
 int main()
 {
-	std::cout << "Hello World." << std::endl;
+	LOG("Hello, World!");
+	DLOG("This is an indented Log!");
+	LOG("This is not indented!");
 }
