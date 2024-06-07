@@ -14,6 +14,7 @@ public:
 	Log* IncreaseIndent(int indent);
 	Log* DecreaseIndent(int indent);
 	Log* Print(std::string message);
+	int GetIndent() const;
 
 private:
 	static inline Log* s_Instance;

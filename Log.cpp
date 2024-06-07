@@ -17,6 +17,7 @@ Log* Log::GetInstance()
 Log* Log::SetIndent(int indent)
 {
 	m_Indent = indent;
+
 	return this;
 }
 
@@ -25,7 +26,7 @@ Log* Log::SetIndent(int indent)
  */
 Log* Log::IncreaseIndent(int indent)
 {
-	this->m_Indent += indent;
+	m_Indent += indent;
 
 	return this;
 }
@@ -35,7 +36,7 @@ Log* Log::IncreaseIndent(int indent)
  */
 Log* Log::DecreaseIndent(int indent)
 {
-	this->m_Indent -= indent;
+	m_Indent -= indent;
 
 	return this;
 }
@@ -45,10 +46,20 @@ Log* Log::DecreaseIndent(int indent)
  */
 Log* Log::Print(std::string message)
 {
+	// Print the indentation first
 	for (int i = 0; i < m_Indent; i++)
 		std::cout << " ";
 
+	// Print the message.
 	std::cout << message << std::endl;
 
 	return this;
+}
+
+/**
+ * Get the indent of the Log class.
+ */
+int Log::GetIndent() const
+{
+	return m_Indent;
 }
