@@ -5,6 +5,14 @@
 
 #define LOG(x) Log::GetInstance()->Print(x)
 #define DLOG(x) Log::GetInstance()->IncreaseIndent(2)->Print(x)->DecreaseIndent(2)
+#define LOG_DECONSTRUCT delete Log::GetInstance()
+
+enum LogLevel
+{
+	INFO,
+	WARNING,
+	ERROR
+};
 
 class Log
 {
@@ -17,6 +25,11 @@ public:
 	int GetIndent() const;
 
 private:
+	Log() = default;
+	Log(const LogLevel logLevel);
+
+private:
 	static inline Log* s_Instance;
 	int m_Indent = 0;
+	LogLevel m_LogLevel;
 };

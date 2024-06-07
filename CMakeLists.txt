@@ -12,7 +12,7 @@ endif()
 project ("cpp-learning")
 
 # Fügen Sie der ausführbaren Datei dieses Projekts eine Quelle hinzu.
-add_executable (cpp-learning "cpp-learning.cpp"  "Log.cpp"  "Log.h")
+add_executable (cpp-learning "Main.cpp"  "Log.cpp"  "Log.h" "Runner.cpp" "Runner.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET cpp-learning PROPERTY CXX_STANDARD 20)

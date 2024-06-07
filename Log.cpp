@@ -1,5 +1,16 @@
 #include "Log.h"
 
+Log::Log()
+	: m_LogLevel(LogLevel::INFO)
+{
+}
+
+Log::Log(const LogLevel logLevel)
+{
+	// Set the log level.
+	m_LogLevel = logLevel;
+}
+
 /**
  * Static method to get the instance of the Log class.
  */
