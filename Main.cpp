@@ -3,6 +3,4 @@
 int main()
 {
 	Runner runner;
-
-	std::cin.get();
 }

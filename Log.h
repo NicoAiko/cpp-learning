@@ -25,7 +25,7 @@ public:
 	int GetIndent() const;
 
 private:
-	Log() = default;
+	Log();
 	Log(const LogLevel logLevel);
 
 private:
